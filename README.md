@@ -7,6 +7,11 @@ Pack of useful helpers for Yii2 Framework
 [![Latest Stable Version](https://poser.pugx.org/yii2deman/yii2-helpers/v/stable)](https://packagist.org/packages/yii2deman/yii2-helpers)
 [![Latest Unstable Version](https://poser.pugx.org/yii2deman/yii2-helpers/v/unstable)](https://packagist.org/packages/yii2deman/yii2-helpers)
 
+* ArrayHelper - extended Yii array helper
+* Html - extended Yii html helper
+* ViewHelper - helper for view files contains simple render logic
+* VimeoHelper - helper for Vimeo API
+
 Installation
 ------------
 Run command
