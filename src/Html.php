@@ -5,7 +5,7 @@
  * @license BSD 3-Clause License
  */
 
-namespace frontend\helpers;
+namespace yii2deman\helpers;
 
 use yii\helpers\BaseHtml;
 

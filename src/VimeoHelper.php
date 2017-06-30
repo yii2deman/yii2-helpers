@@ -5,7 +5,7 @@
  * @license BSD 3-Clause License
  */
 
-namespace frontend\modules\reviews\helpers;
+namespace yii2deman\helpers;
 
 /**
  * Vimeo API helper
