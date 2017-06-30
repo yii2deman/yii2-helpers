@@ -1,0 +1,32 @@
+{
+  "name": "yii2deman/yii2-helpers",
+  "description": "Pack of useful helpers for Yii2 Framework",
+  "keywords": ["yii2", "helpers", "tools"],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "support": {
+    "source": "https://github.com/yii2deman/yii2-helpers",
+    "issues": "https://github.com/yii2deman/yii2-helpers/issues"
+  },
+  "authors": [
+    {
+      "name": "Vladimir Kuprienko",
+      "email": "vldmr.kuprienko@gmail.com",
+      "role": "developer"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "yii2deman\\helpers\\": "src"
+    }
+  }
+}
