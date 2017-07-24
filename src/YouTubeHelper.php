@@ -16,6 +16,12 @@ namespace yii2deman\helpers;
 class YouTubeHelper
 {
     /**
+     * @var string URL to player API.
+     */
+    public static $playerEndpoint = 'https://www.youtube.com/embed/{video-code}';
+
+
+    /**
      * Returns video ID
      *
      * @param string $url URL to video
@@ -30,6 +36,20 @@ class YouTubeHelper
             $pathInfo = parse_url($url);
             parse_str($pathInfo['query'], $params);
             return isset($params['v']) ? $params['v'] : null;
+        }
+        return null;
+    }
+
+    /**
+     * Generates URL to player API
+     *
+     * @param string $embed URL to video
+     * @return null|string
+     */
+    public static function getApiUrl($embed)
+    {
+        if ($code = self::getVideoId($embed)) {
+            return strtr(self::$playerEndpoint, ['{video-code}' => $code]);
         }
         return null;
     }
