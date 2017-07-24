@@ -12,6 +12,7 @@ Pack of useful helpers for Yii2 Framework
 * ViewHelper - helper for view files contains simple render logic
 * VimeoHelper - helper for Vimeo API
 * YouTubeHelper - helper for YouTube API
+* VideoHostHelper - helper for YouTube and Vimeo video hostings
 
 Installation
 ------------
