@@ -16,6 +16,12 @@ namespace yii2deman\helpers;
 class VimeoHelper
 {
     /**
+     * @var string URL to player API.
+     */
+    public static $playerEndpoint = 'https://player.vimeo.com/video/{video-code}';
+
+    
+    /**
      * Returns ID of video from URL
      *
      * @param string $url
@@ -27,6 +33,20 @@ class VimeoHelper
         if (!empty($matches)) {
             $parts = explode('/', $matches[0]);
             return $parts[1];
+        }
+        return null;
+    }
+
+    /**
+     * Generates URL to player API
+     *
+     * @param string $embed URL to video like https://vimeo.com/169599296
+     * @return null|string
+     */
+    public static function getApiUrl($embed)
+    {
+        if ($code = self::getVideoId($embed)) {
+            return strtr(self::$playerEndpoint, ['{video-code}' => $code]);
         }
         return null;
     }
