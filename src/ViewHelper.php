@@ -40,6 +40,18 @@ class ViewHelper
     }
 
     /**
+     * Returns number for rendering. If number less than 9
+     * before this number will be added zero.
+     *
+     * @param int|string $number
+     * @return string
+     */
+    public static function zeroNumber($number)
+    {
+        return ($number < 10) ? ('0' . $number) : $number;
+    }
+
+    /**
      * Returns even number
      *
      * @return int
