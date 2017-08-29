@@ -8,31 +8,34 @@
 namespace yii2deman\helpers;
 
 /**
- * Vimeo API helper
+ * YouTube API helper
  *
  * @author Vladimir Kuprienko <vldmr.kuprienko@gmail.com>
  * @since 1.0
  */
-class VimeoHelper
+class YouTubeHelper
 {
     /**
      * @var string URL to player API.
      */
-    public static $playerEndpoint = 'https://player.vimeo.com/video/{video-code}';
+    public static $playerEndpoint = 'https://www.youtube.com/embed/{video-code}';
 
-    
+
     /**
-     * Returns ID of video from URL
+     * Returns video ID
      *
-     * @param string $url
-     * @return null|string
+     * @param string $url URL to video
+     * @return null
      */
     public static function getVideoId($url)
     {
-        preg_match('/vimeo\.com\/[0-9]\d+/', $url, $matches);
-        if (!empty($matches)) {
+        if (preg_match('/youtu\.be\/[a-zA-Z0-9]+/', $url, $matches)) {
             $parts = explode('/', $matches[0]);
             return $parts[1];
+        } elseif (preg_match('/youtube\.com\/watch/', $url)) {
+            $pathInfo = parse_url($url);
+            parse_str($pathInfo['query'], $params);
+            return isset($params['v']) ? $params['v'] : null;
         }
         return null;
     }
@@ -40,7 +43,7 @@ class VimeoHelper
     /**
      * Generates URL to player API
      *
-     * @param string $embed URL to video like https://vimeo.com/169599296
+     * @param string $embed URL to video
      * @return null|string
      */
     public static function getApiUrl($embed)
