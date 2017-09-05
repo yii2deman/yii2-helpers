@@ -13,6 +13,7 @@ Pack of useful helpers for Yii2 Framework
 * VimeoHelper - helper for Vimeo API
 * YouTubeHelper - helper for YouTube API
 * VideoHostHelper - helper for YouTube and Vimeo video hostings
+* UserAgentHelper - helper for checking of user agent
 
 Installation
 ------------
