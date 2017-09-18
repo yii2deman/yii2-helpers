@@ -26,6 +26,6 @@ class UserAgentHelper
     public static function isGooglePageSpeed()
     {
         $userAgent = Yii::$app->getRequest()->getUserAgent();
-        return ($userAgent) && (stripos($userAgent, 'Speed Insights') === false);
+        return ($userAgent != null) && (stripos($userAgent, 'Speed Insights') != false);
     }
 }   
