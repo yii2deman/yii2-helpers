@@ -1,6 +1,12 @@
 Useful helpers
 ==============
 
+## This package is deprecated
+
+This package is deprecated. Use [yiimaker/yii2-helpers](https://github.com/yiimaker/yii2-helpers) instead.
+
+---
+
 Pack of useful helpers for Yii2 Framework.
 
 [![Total Downloads](https://poser.pugx.org/yii2deman/yii2-helpers/downloads)](https://packagist.org/packages/yii2deman/yii2-helpers)
